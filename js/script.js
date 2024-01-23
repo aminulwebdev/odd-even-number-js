@@ -56,9 +56,13 @@ btnClr.addEventListener("click", function () {
   evenNumber.innerHTML = ""
   evenNumber.style.color = ""
   evenNumber.style.border = ""
-  evenNumber.style.borderRadius = ""
+
   oddNumber.innerHTML = ""
   oddNumber.style.color = ""
   oddNumber.style.border = ""
-  oddNumber.style.borderRadius = ""
+
+  multi.innerHTML = ""
+  multi.style.color = ""
+  multiBoder.style.border = ""
+
 })
