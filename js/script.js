@@ -43,13 +43,20 @@ btn.addEventListener("click", function () {
     }
   }
 
-  for (let i = 0; i <= 10; i++) {
-    multi.innerHTML += getValue + " x " + i + " = " + getValue * i + "<br>"
-    multi.style.color = "red"
-    multiBoder.style.border = "2px solid #017100"
-    multiBoder.style.borderRadius = "15px"
+  if (findNumber.value == "") {
+    multi.innerHTML = ""
+  } else if (isNaN(findNumber.value)) {
+    multi.innerHTML = ""
+  } else {
+    for (let i = 0; i <= 10; i++) {
+      multi.innerHTML += getValue + " x " + i + " = " + getValue * i + "<br>"
+      multi.style.color = "red"
+      multiBoder.style.border = "2px solid #017100"
+      multiBoder.style.borderRadius = "15px"
+    }
   }
 })
+
 
 btnClr.addEventListener("click", function () {
   findNumber.value = ""
@@ -60,6 +67,7 @@ btnClr.addEventListener("click", function () {
   oddNumber.innerHTML = ""
   oddNumber.style.color = ""
   oddNumber.style.border = ""
+  err.innerHTML = "";
 
   multi.innerHTML = ""
   multi.style.color = ""
